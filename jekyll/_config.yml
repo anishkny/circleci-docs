@@ -29,7 +29,7 @@ algolia:
       'headings',
       'title'
     ]
-    
+
 sass:
   sass_dir: _sass
 
@@ -88,9 +88,17 @@ defaults:
   -
     scope:
       path: ""
+      type: "cci2"
+    values:
+      lang: "en"
+
+  -
+    scope:
+      path: ""
     values:
       hide: false
       search: true
+
 
 segment: 'mAJ9W2SwLHgmJtFkpaXWCbwEeNk9D8CZ'
 

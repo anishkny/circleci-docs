@@ -1,17 +1,18 @@
 <!-- FULL SCREEN /-->
 <div class="sidebar-wrapper">
 	<nav class="sidebar fixed">
-		{% assign sidenav = site.data.sidenav %}
+		{% assign lang = page.lang %}
+		{% assign sidenav = site.data.sidenav[lang] %}
 		{% assign current_url = page.url | slice: 1, page.url.size %}
 
 		{% for main-item in sidenav %}
 			<ul>
 				<li class="main-nav-item closed" data-section="{{ main-item.name | slugify }}">
 					<div class="list-wrap">
-						{% if main-item.icon %} 
-							{% asset '{{ main-item.icon }}' class=icon %} 
+						{% if main-item.icon %}
+							{% asset '{{ main-item.icon }}' class=icon %}
 						{% endif %}
-						
+
 						{% if main-item.link %}
 							<a class="{% if current_url == main-item.link %} active {% endif %}" href="{{ site.baseurl }}/{{ main-item.link }}#section={{ main-item.name | slugify }}" data-proofer-ignore>{{ main-item.name}}</a>
 						{% else %}
@@ -22,7 +23,7 @@
 							{% asset docs/arrow-right.svg class=arrow %}
 						{% endif %}
 					</div>
-					
+
 					{% if main-item.children %}
 					<ul class="subnav">
 						{% for item in main-item.children %}
