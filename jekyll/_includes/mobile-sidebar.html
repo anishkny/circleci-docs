@@ -2,7 +2,7 @@
 <div class="sidebar-mobile-wrapper">
   <!-- DISPLAY ITEM /-->
   <div class="current-item">
-		{% assign lang = page.lang %}
+    {% assign lang = page.lang %}
     {% assign items = site.data.sidenav[lang] %}
     {% for item in items %}
       <div class="mobile-sidebar-item {% if forloop.index != 1 %} hidden {% endif %}" data-id="{{ item.name | slugify }}">

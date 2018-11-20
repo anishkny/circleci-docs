@@ -85,7 +85,7 @@ collections:
     site_section: true
     output: true
     permalink: /ja/2.0/:path/
-    prefix: "/2.0"
+    prefix: "/ja/2.0"
     selectorName: "2.0"
 
 twitter_username: circleci
@@ -115,7 +115,7 @@ defaults:
 
 t:
     translation_in_progress:
-        ja: "ただいま翻訳中です"
+        ja: "このページはただいま翻訳中です"
 
 segment: 'mAJ9W2SwLHgmJtFkpaXWCbwEeNk9D8CZ'
 
